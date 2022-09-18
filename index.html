@@ -9,18 +9,48 @@
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="page">
+  <header class="header">
+    <h1 class="header__title">calc</h1>
+    <div class="header__switcher">
+      <p class="header__theme">THEME</p>
+      <div class="header__options">
+        <div class="header__numbers">
+          <p class="header__number">1</p>
+          <p class="header__number">2</p>
+          <p class="header__number">3</p>
+        </div>
+        <div class="header__bar">
+          <div class="header__point header__point--left"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main__output">0</div>
+  </main>
+  <footer class="footer">
+    <div class="footer__buttons">
+      <div class="footer__button">7</div>
+      <div class="footer__button">8</div>
+      <div class="footer__button">9</div>
+      <div class="footer__button footer__button--DEL">DEL</div>
+      <div class="footer__button">4</div>
+      <div class="footer__button">5</div>
+      <div class="footer__button">6</div>
+      <div class="footer__button">+</div>
+      <div class="footer__button">1</div>
+      <div class="footer__button">2</div>
+      <div class="footer__button">3</div>
+      <div class="footer__button">-</div>
+      <div class="footer__button">.</div>
+      <div class="footer__button">0</div>
+      <div class="footer__button">/</div>
+      <div class="footer__button">x</div>
+      <div class="footer__button footer__button--RESET">RESET</div>
+      <div class="footer__button footer__button--EQUAL">=</div>
+    </div>
+  </footer>
 </body>
 </html>
