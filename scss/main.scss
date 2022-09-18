@@ -20,6 +20,7 @@ $breakpoints: (
 }
 
 *{
+    transition: all 100ms;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -41,6 +42,9 @@ $breakpoints: (
     }
     &--second{
         background-color: $main-bg2;
+        .header{
+            color: black;
+        }
     }
     &--third{
         background-color: $main-bg3;
@@ -63,17 +67,23 @@ $breakpoints: (
     }
     &__numbers{
         display: flex;
+        padding: 0 10px;
         justify-content: space-between;
     }
     &__bar{
         width: 100%;
-        min-width: 70px;
+        min-width: 200px;
         background-color: $keypad-bg;
         height: 32px;
         border-radius: 15px;
         position: relative;
+        transition: all 200ms;
+        &--second{
+            background-color: white;
+        }
     }
     &__point{
+        transition: all 200ms;
         width: 28px;
         height: 28px;
         border-radius: 50%;
@@ -82,14 +92,17 @@ $breakpoints: (
         top: 2px;
         left: 0;
         &--left{
-            left: 5px;
+            left: 5%;
         }
         &--middle{
-            left: 30%;
+            left: 45%;
         }
         &--right{
-            left: 50%;
+            left: 80%;
         }
+    }
+    &__number:hover{
+        cursor: pointer;
     }
 }
 .main{
@@ -110,6 +123,7 @@ $breakpoints: (
     }
     &--second{
         background-color: $screen-bg2;
+        color: black;
     }
     &--third{
         background-color: $screen-bg3;
@@ -123,6 +137,12 @@ $breakpoints: (
     padding: 30px;
     &--first{
         background-color: $keypad-bg;
+    }
+    &--second{
+        background-color: $keypad-bg2;
+    }
+    &--third{
+        background-color: $keypad-bg3;
     }
     &__buttons{
         display: grid;
@@ -162,6 +182,29 @@ $breakpoints: (
             box-shadow: 0px 5px $key-red-shadow;
             color: $white-key;
         }
+        &--2{
+            background-color: $key-bg2;
+            box-shadow: 0px 5px $key-shadow2;
+        }
+        &--22{
+            background-color: $key-red2;
+            box-shadow: 0px 5px $key-red-shadow2;
+        }
+        &--3{
+            background-color: $key-bg3;
+            box-shadow: 0 5px $key-shadow3;
+            color: white;
+        }
+        &--33{
+            background-color: $key-blue3;
+            box-shadow: 0 5px $key-blue-shadow3;
+        }
+        &--333{
+            background-color: $key-red3;
+            box-shadow: 0px 5px $key-red-shadow3;
+        }
+
+
     }
     &__button:nth-of-type(2){
         grid-column-start: 3;

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 * {
+  transition: all 100ms;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -24,6 +25,9 @@
 .page--second {
   background-color: hsl(0deg, 0%, 90%);
 }
+.page--second .header {
+  color: black;
+}
 .page--third {
   background-color: hsl(268deg, 75%, 9%);
 }
@@ -45,17 +49,23 @@
 }
 .header__numbers {
   display: flex;
+  padding: 0 10px;
   justify-content: space-between;
 }
 .header__bar {
   width: 100%;
-  min-width: 70px;
+  min-width: 200px;
   background-color: hsl(223deg, 31%, 20%);
   height: 32px;
   border-radius: 15px;
   position: relative;
+  transition: all 200ms;
+}
+.header__bar--second {
+  background-color: white;
 }
 .header__point {
+  transition: all 200ms;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -65,13 +75,16 @@
   left: 0;
 }
 .header__point--left {
-  left: 5px;
+  left: 5%;
 }
 .header__point--middle {
-  left: 30%;
+  left: 45%;
 }
 .header__point--right {
-  left: 50%;
+  left: 80%;
+}
+.header__number:hover {
+  cursor: pointer;
 }
 
 .main {
@@ -93,6 +106,7 @@
 }
 .main--second {
   background-color: hsl(0deg, 0%, 93%);
+  color: black;
 }
 .main--third {
   background-color: hsl(268deg, 71%, 12%);
@@ -107,6 +121,12 @@
 }
 .footer--first {
   background-color: hsl(223deg, 31%, 20%);
+}
+.footer--second {
+  background-color: hsl(0deg, 5%, 81%);
+}
+.footer--third {
+  background-color: hsl(268deg, 71%, 12%);
 }
 .footer__buttons {
   display: grid;
@@ -146,6 +166,27 @@
   background-color: hsl(6deg, 63%, 50%);
   box-shadow: 0px 5px hsl(6deg, 70%, 34%);
   color: hsl(0deg, 0%, 100%);
+}
+.footer__button--2 {
+  background-color: hsl(185deg, 42%, 37%);
+  box-shadow: 0px 5px hsl(185deg, 58%, 25%);
+}
+.footer__button--22 {
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0px 5px hsl(25deg, 99%, 27%);
+}
+.footer__button--3 {
+  background-color: hsl(281deg, 89%, 26%);
+  box-shadow: 0 5px hsl(285deg, 91%, 52%);
+  color: white;
+}
+.footer__button--33 {
+  background-color: hsl(268deg, 47%, 21%);
+  box-shadow: 0 5px hsl(290deg, 70%, 36%);
+}
+.footer__button--333 {
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0px 5px hsl(177deg, 92%, 70%);
 }
 .footer__button:nth-of-type(2) {
   grid-column-start: 3;
