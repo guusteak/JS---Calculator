@@ -1,0 +1,223 @@
+@import 'variables';
+$breakpoints: (
+    xsmall: 'max-width: 500px',
+    small: 'min-width: 500px',
+    medium: 'min-width: 800px',
+    large: 'min-width: 1024px',
+    xlarge: 'min-width: 1200px',
+    xxlarge: 'min-width: 1400px',
+);
+@mixin viewport($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if($size){
+        @media (#{$size}){
+            @content;
+        }}
+    @else{ 
+        @error '"#{$breakpoint}" - I cannot identify this value';
+}
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: $font-size;
+}
+.page{
+    min-height: 800px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: $font-size;
+    font-family: $font-style;
+    &--first{
+        background-color: $main-bg;
+    }
+    &--second{
+        background-color: $main-bg2;
+    }
+    &--third{
+        background-color: $main-bg3;
+    }
+}
+
+.header{
+    margin-top: 50px;
+    min-height: 100px;
+    height: 10%;
+    color: $white-key;
+    width: 40%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    &__switcher{
+        align-items: flex-end;
+        display: flex;
+        gap: 15px;
+    }
+    &__numbers{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bar{
+        width: 100%;
+        min-width: 70px;
+        background-color: $keypad-bg;
+        height: 32px;
+        border-radius: 15px;
+        position: relative;
+    }
+    &__point{
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: $key-red2;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        &--left{
+            left: 5px;
+        }
+        &--middle{
+            left: 30%;
+        }
+        &--right{
+            left: 50%;
+        }
+    }
+}
+.main{
+    width: 40%;
+    border-radius: 15px;
+    color: $white-key;
+    padding: 30px;
+    height: 20%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    &__output{
+        font-size: 2rem;
+    }
+    &--first{
+        background-color: $screen-bg;
+    }
+    &--second{
+        background-color: $screen-bg2;
+    }
+    &--third{
+        background-color: $screen-bg3;
+    }
+}
+.footer{
+    margin-bottom: 50px;
+    border-radius: 25px;
+    color: $white-key;
+    width: 40%;
+    padding: 30px;
+    &--first{
+        background-color: $keypad-bg;
+    }
+    &__buttons{
+        display: grid;
+        grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+        grid-template-rows: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
+    }
+    &__button{
+        border-radius: 12px;
+        background-color: $white-key;
+        color: $black-key;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        height: 50px;
+        box-shadow: 0px 5px $key-blue-shadow;
+        &--DEL{
+            background-color: $key-bg;
+            box-shadow: 0px 5px $key-shadow;
+            color: $white-key;
+        }
+        &--RESET{
+            width: 100%;
+            grid-row-start: 9;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: $key-bg;
+            box-shadow: 0px 5px $key-shadow;
+            color: $white-key;
+        }
+        &--EQUAL{
+            width: 100%;
+            grid-row-start: 9;
+            grid-column-start: 5;
+            grid-column-end: 9;
+            background-color: $key-red;
+            box-shadow: 0px 5px $key-red-shadow;
+            color: $white-key;
+        }
+    }
+    &__button:nth-of-type(2){
+        grid-column-start: 3;
+    }
+    &__button:nth-of-type(3){
+        grid-column-start: 5;
+    }
+    &__button:nth-of-type(4){
+        grid-column-start: 7;
+    }
+    &__button:nth-of-type(5){
+        grid-row-start: 3;
+    }
+    &__button:nth-of-type(6){
+        grid-row-start: 3;
+        grid-column-start: 3;
+    }
+    &__button:nth-of-type(7){
+        grid-row-start: 3;
+        grid-column-start: 5;
+    }
+    &__button:nth-of-type(8){
+        grid-row-start: 3;
+        grid-column-start: 7;
+    }
+    &__button:nth-of-type(9){
+        grid-row-start: 5;
+        grid-column-start: 1;
+    }
+    &__button:nth-of-type(10){
+        grid-row-start: 5;
+        grid-column-start: 3;
+    }
+    &__button:nth-of-type(11){
+        grid-row-start: 5;
+        grid-column-start: 5;
+    }
+    &__button:nth-of-type(12){
+        grid-row-start: 5;
+        grid-column-start: 7;
+    }
+    &__button:nth-of-type(13){
+        grid-row-start: 7;
+        grid-column-start: 1;
+    }
+    &__button:nth-of-type(14){
+        grid-row-start: 7;
+        grid-column-start: 3;
+    }
+    &__button:nth-of-type(15){
+        grid-row-start: 7;
+        grid-column-start: 5;
+    }
+    &__button:nth-of-type(16){
+        grid-row-start: 7;
+        grid-column-start: 7;
+    }
+
+}

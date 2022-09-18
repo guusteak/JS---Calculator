@@ -1,0 +1,51 @@
+//Theme 1
+    //Backgrounds
+    $main-bg: hsl(222, 26%, 31%);
+    $keypad-bg: hsl(223, 31%, 20%);
+    $screen-bg: hsl(224, 36%, 15%);
+    //Keys
+    $key-bg: hsl(225, 21%, 49%);
+    $key-shadow: hsl(224, 28%, 35%);
+    $key-red: hsl(6, 63%, 50%);
+    $key-red-shadow: hsl(6, 70%, 34%);
+    $key-blue: hsl(30, 25%, 89%);
+    $key-blue-shadow: hsl(28, 16%, 65%);
+    //Text
+    $black-key: hsl(221, 14%, 31%);
+    $white-key: hsl(0, 0, 100%);
+//Theme 2
+    //Backgrounds
+    $main-bg2: hsl(0, 0%, 90%);
+    $keypad-bg2: hsl(0, 5%, 81%);
+    $screen-bg2: hsl(0, 0%, 93%);
+    //Keys
+    $key-bg2: hsl(185, 42%, 37%);
+    $key-shadow2: hsl(185, 58%, 25%);
+    $key-red2: hsl(25, 98%, 40%);
+    $key-red-shadow2: hsl(25, 99%, 27%);
+    $key-blue2: hsl(45, 7%, 89%);
+    $key-blue-shadow2: hsl(35, 11%, 61%);
+    //Text
+    $black-key2: hsl(60, 10%, 19%);
+    $white-key2: hsl(0, 0, 100%);
+
+//Theme 3
+    //Backgrounds
+    $main-bg3: hsl(268, 75%, 9%);
+    $keypad-bg3: hsl(268, 71%, 12%);
+    $screen-bg3: hsl(268, 71%, 12%);
+    //Keys
+    $key-bg3: hsl(281, 89%, 26%);
+    $key-shadow3: hsl(285, 91%, 52%);
+    $key-red3: hsl(176, 100%, 44%);
+    $key-red-shadow3: hsl(177, 92%, 70%);
+    $key-blue3: hsl(268, 47%, 21%);
+    $key-blue-shadow3: hsl(290, 70%, 36%);
+    //Text
+    $black-key3: hsl(198, 20%, 13%);
+    $white-key3: hsl(0, 0, 100%);
+    $yellow-key3: hsl(52, 100%, 62%);
+
+$font-size: 32px;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+$font-style: "League Spartan";

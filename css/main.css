@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+}
+
+.page {
+  min-height: 800px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 32px;
+  font-family: "League Spartan";
+}
+.page--first {
+  background-color: hsl(222deg, 26%, 31%);
+}
+.page--second {
+  background-color: hsl(0deg, 0%, 90%);
+}
+.page--third {
+  background-color: hsl(268deg, 75%, 9%);
+}
+
+.header {
+  margin-top: 50px;
+  min-height: 100px;
+  height: 10%;
+  color: hsl(0deg, 0%, 100%);
+  width: 40%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.header__switcher {
+  align-items: flex-end;
+  display: flex;
+  gap: 15px;
+}
+.header__numbers {
+  display: flex;
+  justify-content: space-between;
+}
+.header__bar {
+  width: 100%;
+  min-width: 70px;
+  background-color: hsl(223deg, 31%, 20%);
+  height: 32px;
+  border-radius: 15px;
+  position: relative;
+}
+.header__point {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: hsl(25deg, 98%, 40%);
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.header__point--left {
+  left: 5px;
+}
+.header__point--middle {
+  left: 30%;
+}
+.header__point--right {
+  left: 50%;
+}
+
+.main {
+  width: 40%;
+  border-radius: 15px;
+  color: hsl(0deg, 0%, 100%);
+  padding: 30px;
+  height: 20%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.main__output {
+  font-size: 2rem;
+}
+.main--first {
+  background-color: hsl(224deg, 36%, 15%);
+}
+.main--second {
+  background-color: hsl(0deg, 0%, 93%);
+}
+.main--third {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.footer {
+  margin-bottom: 50px;
+  border-radius: 25px;
+  color: hsl(0deg, 0%, 100%);
+  width: 40%;
+  padding: 30px;
+}
+.footer--first {
+  background-color: hsl(223deg, 31%, 20%);
+}
+.footer__buttons {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-rows: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
+}
+.footer__button {
+  border-radius: 12px;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(221deg, 14%, 31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 50px;
+  box-shadow: 0px 5px hsl(28deg, 16%, 65%);
+}
+.footer__button--DEL {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+.footer__button--RESET {
+  width: 100%;
+  grid-row-start: 9;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+.footer__button--EQUAL {
+  width: 100%;
+  grid-row-start: 9;
+  grid-column-start: 5;
+  grid-column-end: 9;
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 5px hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+.footer__button:nth-of-type(2) {
+  grid-column-start: 3;
+}
+.footer__button:nth-of-type(3) {
+  grid-column-start: 5;
+}
+.footer__button:nth-of-type(4) {
+  grid-column-start: 7;
+}
+.footer__button:nth-of-type(5) {
+  grid-row-start: 3;
+}
+.footer__button:nth-of-type(6) {
+  grid-row-start: 3;
+  grid-column-start: 3;
+}
+.footer__button:nth-of-type(7) {
+  grid-row-start: 3;
+  grid-column-start: 5;
+}
+.footer__button:nth-of-type(8) {
+  grid-row-start: 3;
+  grid-column-start: 7;
+}
+.footer__button:nth-of-type(9) {
+  grid-row-start: 5;
+  grid-column-start: 1;
+}
+.footer__button:nth-of-type(10) {
+  grid-row-start: 5;
+  grid-column-start: 3;
+}
+.footer__button:nth-of-type(11) {
+  grid-row-start: 5;
+  grid-column-start: 5;
+}
+.footer__button:nth-of-type(12) {
+  grid-row-start: 5;
+  grid-column-start: 7;
+}
+.footer__button:nth-of-type(13) {
+  grid-row-start: 7;
+  grid-column-start: 1;
+}
+.footer__button:nth-of-type(14) {
+  grid-row-start: 7;
+  grid-column-start: 3;
+}
+.footer__button:nth-of-type(15) {
+  grid-row-start: 7;
+  grid-column-start: 5;
+}
+.footer__button:nth-of-type(16) {
+  grid-row-start: 7;
+  grid-column-start: 7;
+}/*# sourceMappingURL=main.css.map */
