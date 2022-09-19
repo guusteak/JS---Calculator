@@ -57,3 +57,77 @@ function change(argumentpassed){
         console.log("Something went wrong")
     }
 }
+for(let j=0; j<=18; j++){
+    let conduct = () =>{
+        let buttonpassed = j;
+        calculate(buttonpassed);
+    }
+    document.getElementsByClassName("footer__button")[j].addEventListener("click", conduct);
+}
+function calculate(buttonpassed){
+    let screen = document.getElementsByClassName("main__output")[0];
+    switch(buttonpassed){
+        case 0:
+        case 1:
+        case 2:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+            if(screen.innerHTML == "0" ){
+                screen.innerHTML = document.getElementsByClassName("footer__button")[buttonpassed].innerHTML;
+            }   
+            else{
+                screen.innerHTML += document.getElementsByClassName("footer__button")[buttonpassed].innerHTML;
+            }
+            break;
+        case 3:
+            if(screen.innerHTML.length == 1 && screen.innerHTML == "0"){
+                console.log("pierdol sie");
+                break;
+            }
+            else if(screen.innerHTML.length == 1 ){
+                screen.innerHTML = "0";
+                break;
+            }
+            else{
+                let valuelist = screen.innerHTML;
+                valuelist.split('');
+                let valuelist2 = Object.assign([], valuelist);
+                valuelist2.pop();
+                let output = "";
+                for(let i=0; i<valuelist2.length; i++){
+                    output += valuelist2[i];
+                }
+                screen.innerHTML = output;
+                break;
+                }
+                let valuelist = screen.innerHTML;
+                valuelist.split('');
+                let valuelist2 = Object.assign([], valuelist);
+                valuelist2.pop();
+                let output = "";
+                for(let i=0; i<valuelist2.length; i++){
+                    output += valuelist2[i];
+            
+                screen.innerHTML = output;
+                break;
+                }
+        case 16:
+            screen.innerHTML = "0";
+            break;
+        case 17:
+            let result = screen.innerHTML;
+            Number(result);
+            screen.innerHTML = result;
+        }
+        
+}
